@@ -1,0 +1,51 @@
+{
+  "name": "uni-bites",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "copy-bootstrap-files": "cp -r ./node_modules/bootstrap/dist ./public/bootstrap/",
+    "populate-db": "node data/populate-db.js",
+    "test": "protractor specs/ui-tests/conf.js",
+    "test:once": "webdriver-manager update",
+    "test:web-driver": "./node_modules/.bin/webdriver-manager start",
+    "test:servers": "concurrently \"npm start\" \"npm run test:web-driver\"",
+    "test:api": "mocha ./specs/api-tests/cafe.spec.js",
+    "lint": "npm run lint:client; npm run lint:server",
+    "lint:client": "eslint -c eslintrc.client.json --fix --ignore-pattern '*.min.js' public/javascripts/*.js",
+    "lint:server": "eslint -c eslintrc.server.json --fix  specs/ui-tests/*.js models/*.js routes/*.js data/*.js bin/www ./*.js",
+    "lint:reports": "eslint --fix-dry-run --no-color -o eslint.report.client.txt -c eslintrc.client.json --fix-dry-run --ignore-pattern '*.min.js' public/javascripts/*.js;eslint --fix-dry-run --no-color -o eslint.report.server.txt -c eslintrc.server.json specs/ui-tests/*.js models/*.js routes/*.js data/*.js bin/www ./*.js;echo $'\nReports written to: \n * eslint.report.client.txt\n * eslint.report.server.txt'",
+    "docs": "gitbook serve docs",
+    "docs:once": "gitbook install docs"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.9",
+    "dotenv": "^5.0.1",
+    "express": "^4.15.5",
+    "express-hbs": "^1.0.4",
+    "hbs": "^4.0.1",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^4.13.11",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.15.1",
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "concurrently": "^3.5.1",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-import": "^2.9.0",
+    "gitbook-cli": "^2.3.2",
+    "jasmine": "^3.0.0",
+    "mocha": "^5.0.1",
+    "protractor": "^5.3.0",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0",
+    "supertest": "^3.0.0"
+  }
+}

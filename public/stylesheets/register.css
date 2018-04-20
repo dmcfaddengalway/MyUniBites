@@ -1,0 +1,30 @@
+.pageWrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.registerArea {
+    background-image: url("../images/Food/fish.jpg");
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.registerBox {
+    margin-top: 4%;
+    border-radius: 5px;
+    padding: 0px 0px 10px 0px;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.registerBox form > :nth-child(3) {
+    margin-bottom: 5px;
+}
+
+.registerBox form > :nth-child(4) {
+    margin-bottom: 30px;
+}

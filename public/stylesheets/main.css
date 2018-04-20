@@ -1,0 +1,161 @@
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: FLATTY - Free Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://blacktie.co
+ */
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Roboto:300,400,500');
+
+body {
+  background-color: #f2f2f2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Paragraph & Typographic */
+p {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #2D9CDB;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+
+}
+
+.navbar-default .navbar-brand {
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+
+}
+
+/* Footer CSS*/
+
+.footerCopyright {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    color: white;
+}
+
+.bgFooterCopyright {
+    background-color: #EF7E1A;
+    height: 50px;
+    margin-right: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+.footerBar {
+    background-color: #F2994A;
+    padding: 20px 0px;
+    margin: 40px 0px 0px 0px;
+    font-weight: 500;
+}
+
+.socialMedia a:nth-child(2), .socialMedia a:nth-child(3) {
+    margin-left: 20px;
+}
+
+/* Helpers */
+
+.mt {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.form-control {
+	height: 42px;
+	font-size: 18px;
+	width: 280px;
+}
+
+i {
+	margin: 8px;
+	color: #F2994A;
+}
+
+
+/* HeaderWrap */
+#headerwrap {
+	/* background: url(images/bg01.jpg) no-repeat center top; */
+	background-color: #F2994A;
+	margin-top: -20px;
+	/*padding-top:20px;*/
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+	color: white;
+    text-align: left;
+}
+
+.spacing {
+    height: 32vh;
+    overflow-y: hidden;
+}

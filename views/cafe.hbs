@@ -1,0 +1,190 @@
+{{#contentFor "pageStyles"}}
+<link href="/stylesheets/cafe.css" rel="stylesheet">
+{{/contentFor}}
+
+{{#contentFor "pageScripts"}}
+<script src="/javascripts/cafe.js"></script>
+{{/contentFor}}
+
+<div class="bg" style="padding-top:100px;">
+    <div class="container">
+        <div class="col-sm-4">
+            <img src="/images/cafes/{{cafe.urlTag}}.jpg" alt="smokey's logo">
+        </div>
+        <div class="col-sm-8">
+            <h1 class="headline">{{cafe.name}}</h1>
+            <!-- TODO: Get Average stars and populate correct number of stars -->
+
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+    </div><!-- /container -->
+
+    <div class="container" style="padding-top:10px;">
+        <div class="col-sm-7">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-bottom: 20px">
+                <!-- INDICATORS -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+                </ol>
+
+                <!-- WRAPPER FOR SLIDES -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div>
+                            <img class="img-fluid" src="/images/cafes/carousel/{{cafe.urlTag}}/02.jpg" alt="Coffee">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>
+                            <img class="img-fluid" src="/images/cafes/carousel/{{cafe.urlTag}}/03.jpg" alt="Smokey's">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>
+                            <img class="img-fluid" src="/images/cafes/carousel/{{cafe.urlTag}}/04.jpg" alt="Muffin">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEFT AND RIGHT CONTROLS -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div><!-- /carousel slide -->
+        </div>
+
+        <!-- MAP -->
+        <div class="col-sm-5">
+            <div>
+                <h3>Opening Hours:</h3>
+                <p>Monday - Friday:   8.30a.m. - 9p.m.</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.550089581624!2d-9.062390284348465!3d53.2796804874039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b96f3c4d10eed%3A0x4c679f3aad43d0bd!2sSmokey&#39;s+Cafe!5e0!3m2!1sen!2sie!4v1519309237153" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- MENU BOARD -->
+    <div class="container">
+        <div class="col-sm-12">
+            <p class="title">Menu</p>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="menu-body">
+
+                <p class="menu-section-title">Lunch</p>
+                {{#each lunch_menu}}
+                <div class="menu-item">
+                    <div class="menu-item-name">
+                        {{name}}
+                    </div>
+                    <div class="menu-item-price">
+                        {{price}}
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
+
+        <!-- Start of drinks menu -->
+        <div class="col-sm-4 col-sm-offset-4">
+
+            <div class="menu-body">
+
+            <p class="menu-section-title">Drinks</p>
+
+            {{#each drink_menu}}
+            <div class="menu-item">
+                <div class="menu-item-name">
+                    {{name}}
+                </div>
+                <div class="menu-item-price">
+                    {{price}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <!-- REVIEW BOX -->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12">
+
+            {{#if hbsHelpers.unAuthorised }}
+
+            <div>
+                Please <a href="/login{{hbsHelpers.returnUrl}}">login</a> to post a review
+            </div>
+            {{else}}
+
+                <h3 class="text-left">{{hbsHelpers.username}}</h3>
+                <form class="form-horizontal" role="form" id="postForm">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-xs-2">
+                                <textarea class="form-control required" style="min-width: 100%" rows="3" id="inputPost" placeholder="Leave a Review?" maxlength="140"></textarea>
+                                <label id="charRemaining" for="inputPost">140</label>
+                            </div>
+                        </div>
+                        <!-- STAR RATING -->
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating" value="5"/>
+                            <label class="full" for="star5" title="Amazing - 5 stars"></label>
+                            <input type="radio" id="star4half" name="rating" value="4 and a half"/>
+                            <label class="half" for="star4half" title="Great - 4.5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4"/>
+                            <label class="full" for="star4" title="Great - 4 stars"></label>
+                            <input type="radio" id="star3half" name="rating" value="3.5"/>
+                            <label class="half" for="star3half" title="Pretty good - 3.5 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3"/>
+                            <label class="full" for="star3" title="Good - 3 stars"></label>
+                            <input type="radio" id="star2half" name="rating" value="2.5"/>
+                            <label class="half" for="star2half" title="Meh - 2.5 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2"/>
+                            <label class="full" for="star2" title="Not good - 2 stars"></label>
+                            <input type="radio" id="star1half" name="rating" value="1.5"/>
+                            <label class="half" for="star1half" title="Very bad"></label>
+                            <input type="radio" id="star1" name="rating" value="1"/>
+                            <label class="full" for="star1" title="Horrible - 1 star"></label>
+                            <input type="radio" id="starhalf" name="rating" value="0.5"/>
+                            <label class="half" for="starhalf" title="Horrible - 0.5 stars"></label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-1">
+                            <button type="text" class="btn btn-primary">Post Review</button>
+                        </div>
+                    </div>
+                </form>
+            {{/if}}
+            </div>
+        </div>
+        <!-- REVIEWS -->
+        <div class="container">
+            <div id="cafereviews" class="row">
+                <div class="col-sm-4" id="review-temlate">
+                    <p class="title">Reviews</p>
+                    <p>Niamh Downey</p>
+                    <p>"The blueberry muffins are to die for!"</p>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /container -->
+</div><!-- /bg -->

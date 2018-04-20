@@ -1,0 +1,107 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+
+.bg{
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* '.title' is for the menu, review and opening hours */
+.title{
+    font-family: roboto;
+    font-size: 36px;
+    padding-top: 35px;
+}
+
+.menu-body {
+    padding-top: 10px;
+    
+}
+ 
+.menu-section {
+  margin-bottom: 10px; 
+}
+ 
+.menu-section-title {
+  font-family: roboto;
+  font-size: 30px;
+  display: block;
+  font-weight:normal;
+  margin: 20px 0; 
+}
+ 
+.menu-item {
+  font-family: roboto;
+  margin: 24px 0;
+  font-size: 18px;
+}
+ 
+.menu-item-name{
+  font-family: lato;
+  font-weight: bold;
+  border-bottom: 2px dotted;
+}
+ 
+.menu-item-price{
+  float: right;
+  font-weight: bold;
+  font-family: lato;
+  margin-top: -22px;
+}
+
+/* 'Star Rating */
+.rating{
+    border: none;
+    float: left;
+}
+
+.rating > input {display: none;}
+.rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating > label {
+    color: #595959;
+    float: right;
+}
+
+/* 'Star Rating - Hoover */
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {color: #ee7111}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {color: #F2944A}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

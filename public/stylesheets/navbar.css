@@ -1,0 +1,58 @@
+.logoBox {
+    padding: 15px;
+}
+
+.navigation {
+    padding: 30px;
+    background-color: transparent;
+    transition: background-color 1s ease-in-out;
+    -webkit-transition: background-color 1s ease-in-out;
+    -moz-transition: background-color 1s ease-in-out;
+    -o-transition: background-color 1s ease-in-out;
+    -ms-transition: background-color 1s ease-in-out;
+    overflow: hidden;
+}
+
+.navigation.alt-color {
+    background-color: #F2944A;
+}
+
+.navLinks li a {
+    font-family: "Roboto", sans-serif;
+}
+
+.navLinks:last-child {
+    margin-right: 50px !important;
+}
+
+.specialButton {
+    border: 3px solid #F2944A;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.specialButton.alt-border {
+    border: 3px solid #f2f2f2;
+}
+
+.specialButton:hover {
+    border: 3px solid #2D9CDB;
+    background-color: #2D9CDB !important;
+}
+
+
+.hover_col:hover {
+    background-color: #2D9CDB !important;
+    padding-bottom: 20px;
+}
+
+.drop:hover {
+    background-color: #2D9CDB !important;
+}
+
+
+
+.brand {
+    padding: 0px 0px;
+}

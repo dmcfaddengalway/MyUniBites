@@ -1,0 +1,58 @@
+{{!< no-header}}
+
+{{#contentFor "pageScripts"}}
+<script src="/javascripts/login.js"></script>
+{{/contentFor}}
+
+{{#contentFor "pageStyles"}}
+<link href="/stylesheets/login.css" rel="stylesheet">
+{{/contentFor}}
+
+<div class="pageWrapper">
+  <div class="row centered loginArea">
+    <div class="col-md-9 col-md-offset-3">
+
+        <!--FormBox-->
+        <div class="col-sm-8 loginBox">
+            <div class="form-header formHeadBox">
+                <h2 class="form-signin-heading headerTitle">Please Sign In</h2>
+            </div>
+
+            <form  id="log-form" name="log-form" class="form-signin form-horizontal" role="form" method="POST">
+
+                <!-- Username/Email -->
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-lg required inputField" id="inputEmail" name="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Password-->
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control input-lg required inputField" id="inputPassword" name="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 col-sm-offset-3">
+                        <div class="g-signin2" data-longtitle="true" data-width="300" data-onsuccess="onSignIn" data-theme="dark"></div>
+                        <br />
+                        <div class="fb-login-button" data-width="300" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
+                    </div>
+
+                <!--Button-->
+                <div class="form-group">
+                    <div class="col-sm-10 mt col-sm-offset-1">
+                        <button type="submit" class="btn btn-lg btn-block formButton">Sign in</button>
+                    </div>
+                </div>
+            </form>
+            <a href="/register" class="smallBackLink">Need an account? Register here.</a>
+            <a href="/" class="smallBackLink">Back to home page</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+.backgroundimg {
+    background-image: url("../images/meal2.jpg");
+    background-size: cover;
+    height: 95vh;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.search_bar {
+    margin-top: 300px;
+    border-radius: 5px;
+    padding: 0px 0px 10px 0px;
+    border: 1px solid #2D9CDB;
+    padding: 14px 20px;
+    height: 43px;
+    display: inline-block;
+}
+
+.search_button {
+    margin-top: 300px;
+    border-radius: 5px;
+    padding: 0px 0px 10px 0px;
+    border: 1px solid #2D9CDB;
+    padding: 10px 20px;
+    height: 43px;
+    display: inline-block;
+    background-color: #F2994A;
+}
+.btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default  {
+    background-color: #F2994A;
+}
+
+.style_label {
+    color: #2D9CDB;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    display: block;
+    padding-left: 10px;
+}
+
+.wrap {
+    background-color: #E0DADA;
+	margin-top: 20px;
+    background-size: cover;
+	min-height: 50px;
+    overflow: hidden;
+    padding-left: 100px;
+}
+
+.quickBox {
+    height: 150px;
+    background: linear-gradient(180deg, #F2994A 0%, #F72F14 100%), #C4C4C4;
+    text-align: center;
+    color: white;
+    line-height: 150px;
+}
+
+.main-color {
+    background-color: #ffffff !important;
+}
+
+.form-width {
+    width: 250px;
+}
+
+.toRight {
+    align-content: right;
+    padding: 0px 0px 0px 50px;
+}
+
+.alignText {
+    padding: 0px 0px 0px 30px;
+}
+
+.searchDrop {
+    left: -440px;
+    min-width: 342px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #2D9CDB !important;
+}
